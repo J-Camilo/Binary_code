@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Healthy Corporation - Productos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
+  
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center" >
+    <div class="col-sm-2,7">
+      <a href="/"><img class="img-fluid" style="margin: 0 auto; width: 400px;"  src="/static/img/PicsArt_11-24-06.34.03.jpg" ></a>
+    </div>
+  </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #bbf6d7!important;" >
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav justify-content-center aling-items-center">
+            
+            {% if mostrar_login %}
+            <li class="nav-item col-md-3">
+              <a class="nav-link" href="/"><h3>Inicio</h3></a>
+            </li>
+          
+            <li class="nav-item col-md-4">
+              <a class="nav-link" href="/interfazproductos"><h3>Productos</h3></a>
+            </li>
+        
+            <li class="nav-item col-md-3">
+              <a class="nav-link" href="/login"><h3>Ingresar</h3></a>
+            </li>
+            {% endif %}
+            
+            {% if not mostrar_login %}
+            <li class="nav-item col-md-2">
+              <a class="nav-link" href="/"><h3>Inicio</h3></a>
+            </li>
+          
+            <li class="nav-item col-md-3">
+              <a class="nav-link" href="/interfazproductos"><h3>Productos</h3></a>
+            </li>
+
+            <li class="nav-item col-md-3">
+              <a class="nav-link" href="/perfil"><h3>Mi cuenta</h3></a>
+            </li>
+
+            <li class="nav-item col-md-2">
+                <a class="nav-link" href="/carrito"><h3>Carrito</h3></a>
+            </li>
+            {% endif %}
+
+            <li class="nav-item col-md-2">
+              <a class="nav-link" href="/politicas"><h3>Más</h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div  id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      </ol>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100"style="margin-top: 10px; height: 65vh;" src="/static/img_prod/pax.jpeg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" style="margin-top: 10px; height: 65vh;" src="/static/img_prod/nivea.jpeg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" style="margin-top: 10px; height: 65vh;" src="/static/img_prod/durex.jpeg" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" style="margin-top: 10px; height: 65vh;" src="/static/img_prod/sevedol.jpeg" alt="Fourth slide">
+          </div>
+        </div>
+      </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+  <div class="little text-center py-3">
+  </div>
+  <div class="row mx-3">
+
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw7b74d7be/images/large/105031-1-PAX-CALIENTE-NOCHE--500+10+2-MG-GRANULA-CAJ-X-6SOB-X-6GR-PANELA-LIMON.jpg?sw=1000&sh=1000"  class="card-img-top" all="imagen de tarjeta">
+          <div class="card-body">
+            <h5>Pax Noche Caja X 6 Sobres Granulos Panela Limon</h5>
+            <p class="card-text">
+              Valor: $11,000
+            </p>
+            <a href="/t_realizar_compra" class="btn btn-success">Comprar</a>
+            <a href="/añadir_productos/Pax Noche Caja X 6 Sobres Granulos Panela Limon" class="btn btn-dark"> Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw05bd6a7a/images/large/111351-1-PRESERVAT-EXTRA-SEGURO-CAJ-X-3-DUREX.jpg?sw=1000&sh=1000"  class="card-img-top" all="imagen de tarjeta">
+          <div class="card-body">
+            <h5>Condones Durex Extra Seguro 3 Unidades</h5>
+            <p class="card-text">
+              Valor: $7,200
+            </p>
+            <a href="/t_realizar_compra" class="btn btn-success">Comprar</a>
+            <a href="/añadir_productos/Condones Durex Extra Seguro 3 Unidades" class="btn btn-dark"> Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="https://jumbocolombiafood.vteximg.com.br/arquivos/ids/3518334-1000-1000/7702870070536.jpg?v=637287046652400000"  class="card-img-top" all="imagen de tarjeta">
+          <div class="card-body">
+            <h5>Sevedol Extra Fuerte Caja X 24 Tabletas</h5>
+            <p class="card-text">
+              Valor: $35,000
+            </p>
+            <a href="/t_realizar_compra" class="btn btn-success">Comprar</a>
+            <a href="/añadir_productos/Sevedol Extra Fuerte Caja X 24 Tabletas" class="btn btn-dark"> Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <img src="https://mercaldas.vtexassets.com/arquivos/ids/189095/Crema-NIVEA-100-Cuidado-Nutritivo_43232.jpg?v=637236198043100000"  class="card-img-top" all="imagen de tarjeta">
+          <div class="card-body">
+            <h5>Crema NIVEA cuidado nutritivo 100 ml</h5>
+            <p class="card-text">
+              Valor: $15,100
+            </p>
+            <a href="/t_realizar_compra" class="btn btn-success">Comprar</a>
+            <a href="/añadir_productos/Crema NIVEA cuidado nutritivo 100 ml" class="btn btn-dark"> Añadir al carrito</a>
+          </div>
+        </div>
+      </div>
+
+  </div><br>
+     
+      <footer class = "footer">
+        <footer class = "footer">
+          <div class="text-center p-3  bg-light " style="background-color:  secondary">
+            © 2021 Todos los Derechos reservados:
+            <a class="text-secondary"><u>Healthy Corporation</u></a>
+          </div>
+            </footer>
+          </footer><br>
+
+    <script src="js/indexjs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

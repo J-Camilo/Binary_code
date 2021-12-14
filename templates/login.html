@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy Corporation - Login</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
+</head>
+<body>
+  <body >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center" >
+      <div class="col-sm-2,7">
+        <a href="/"><img class="img-fluid" style="margin: 0 auto; width: 400px;"  src="/static/img/PicsArt_11-24-06.34.03.jpg" ></a>
+      </div>
+    </nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #bbf6d7!important;" >
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav justify-content-center aling-items-center">
+              
+            
+            <li class="nav-item col-md-4">
+              <a class="nav-link" href="/"><h3>Inicio</h3></a>
+            </li>
+          
+            <li class="nav-item col-md-5">
+              <a class="nav-link" href="/interfazproductos"><h3>Productos</h3></a>
+            </li>
+        
+            <li class="nav-item col-md-4">
+              <a class="nav-link" href="/login"><h3>Ingresar</h3></a>
+            </li>
+          
+            <li class="nav-item col-md-2">
+              <a class="nav-link" href="/politicas"><h3>Más</h3></a>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <nav style="background-image: url(https://www.xtrafondos.com/wallpapers/resized/degradado-difuminado-verde-y-azul-8004.jpg?s=large);">
+    <div class="modal-dialog text-center">
+      <br><div class="col-sm-12 main-section">
+          <div class="modal-content">
+              <div class="col-12 user-img"><br>
+                  <img src="/static/img/perfil.jpg" style=" width: 100px;"/>
+              </div>
+              <div class="row justify-content-center aling-items-center">
+                <div class="col-lg-12 text-center">
+                    <h4><br>Inicia sesión</h4>
+                </div>
+              </div>
+              <form class="col-12" action="formulario_login" method="POST">
+                  <div class="form-group" id="user-group">
+                    <label for="exampleInputEmail1" class="form-label"><br>Correo electronico</label>
+                    <input name="nombre" type="email" class="form-control" placeholder="Usuario@hotmail.com"/>
+                  </div>
+                  <div class="form-group" id="contrasena-group">
+                    <label for="exampleInputEmail1" class="form-label"><br>Contraseña</label>
+                      <input type="password" class="form-control" placeholder="*******" name="password"/>
+                  </div><br>
+                  <button type="submit" class="btn btn-success"><i class="fas fa-sign-in-alt"></i>  Ingresar</button>
+                  <div class="col-12 ">
+                     
+                  </div><br>
+                  <form class="col-12">
+                    <b><p>¿No tienes cuenta?  </b><a href="/registro">registrate</a></p>
+                  </form><br>
+                  
+              </form>
+            </div>
+      </div><br>
+    </div>
+  </nav>
+
+  <footer  class="text-center text-secondary">
+      
+    <div class="text-center p-3  bg-light " style="background-color:  secondary">
+      © 2021 Todos los Derechos reservados:
+      <a class="text-secondary">Healthy Corporation</a>
+    </div>
+    
+  </footer><br>
+</body>
+</html>

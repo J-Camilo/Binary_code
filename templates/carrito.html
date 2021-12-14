@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Corporation - Carrito</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center" >
+        <div class="col-sm-2,7">
+          <a href="/"><img class="img-fluid" style="margin: 0 auto; width: 400px;"  src="/static/img/PicsArt_11-24-06.34.03.jpg" ></a>
+        </div>
+      </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #bbf6d7!important;" >
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+              <ul class="navbar-nav justify-content-center aling-items-center">
+                
+                <li class="nav-item col-md-3">
+                  <a class="nav-link" href="/"><h3>Inicio</h3></a>
+                </li>
+              
+                <li class="nav-item col-md-4">
+                  <a class="nav-link" href="/interfazproductos"><h3>Productos</h3></a>
+                </li>
+            
+                <li class="nav-item col-md-4">
+                  <a class="nav-link" href="/perfil"><h3>Mi cuenta</h3></a>
+                </li>
+
+                <li class="nav-item col-md-3">
+                    <a class="nav-link" href="/carrito"><h3>Carrito</h3></a>
+                  </li>
+    
+                <li class="nav-item col-md-2">
+                  <a class="nav-link" href="/politicas"><h3>Más</h3></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav><br><br>
+        <div class="row justify-content-center aling-items-center">
+          <div class="col-lg-12 text-center">
+              <h3>Este es tu carrito de compras</h3>
+          </div>
+        </div><br>
+        <div class="col shadow rounded p-210" style="margin-left: 60px; margin-right: 60px;">
+          <table class="table" style="margin-top: 20px; font-family: Arial, Helvetica, sans-serif; size: 20px;">
+            <thead>
+              <tr>
+                <th scope="col" class="col-lg-6"><h3>Producto</h3></th>
+                <th scope="col" class="col-sm-3"><h3>Valor</h3></th>
+                <th scope="col" class="col-lg-4"><h3>Comprar</h3></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for producto in arreglo_productos %}
+                <tr>
+                  <td>
+                    <b>{{producto[0]}}</b>
+                    <img src="{{producto[1]}}" style="width: 120px;">
+                  </td>
+
+                  <td style="margin-top: 30px;"><b>{{producto[2]}}</b></td>
+
+                  <td> 
+<!--quitar del carrito--> <!--<a href="/quitarproducto/{{producto[0]}}" class="btn btn-dark" style="margin-top: 37px;">Quitar producto</a> -->
+                    <a href="/t_realizar_compra" class="btn btn-success" style="margin-top: 37px;">Comprar</a>
+                  </td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div><br>
+
+        <footer  class="text-center text-secondary">
+          
+          <div class="text-center p-3  bg-light " style="background-color:  secondary">
+            © 2021 Todos los Derechos reservados:
+            <a class="text-secondary">Healthy Corporation</a>
+          </div>
+          
+        </footer><br>
+        
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        </body>
+        </html>
+
+
+
+</body>
+</html>

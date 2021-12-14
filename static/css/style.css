@@ -1,0 +1,9 @@
+body{
+    background: url(../img/medicamento.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+div{
+    image-rendering: auto 10px;
+}
+
